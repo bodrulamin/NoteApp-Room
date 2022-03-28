@@ -34,8 +34,6 @@ public class NoteListFragment extends Fragment {
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        NoteDatabase db = Room.databaseBuilder(requireContext(),
-                NoteDatabase.class, "database-name").build();
 
      //   List<Note> notes = db.noteDao().getAllNotes();
 
