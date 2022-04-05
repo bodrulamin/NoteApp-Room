@@ -1,22 +1,19 @@
 package com.bodrulamin.noteapp_room;
 
-import android.app.FragmentManager;
+import android.content.Intent;
 import android.os.Bundle;
-
-import com.bodrulamin.noteapp_room.databinding.ActivityMainBinding;
-import com.google.android.material.snackbar.Snackbar;
-
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
-import android.view.Menu;
-import android.view.MenuItem;
+import com.bodrulamin.noteapp_room.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -30,17 +27,20 @@ public class MainActivity extends AppCompatActivity {
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-
         setSupportActionBar(binding.toolbar);
 
-        navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
-        appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).build();
-        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
+
+
+binding.recyclerListView.setAdapter();
+
+
 
         binding.fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                navController.navigate(R.id.action_NoteListFragment_to_AddNote);
+
+                Intent addNoteIntent = new Intent(MainActivity.this,AddNoteActivity.class);
+                startActivity(addNoteIntent);
             }
         });
     }
@@ -67,10 +67,4 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    @Override
-    public boolean onSupportNavigateUp() {
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
-        return NavigationUI.navigateUp(navController, appBarConfiguration)
-                || super.onSupportNavigateUp();
-    }
 }

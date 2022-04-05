@@ -3,6 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="../../../../../../layout/custom_preview.xml" value="0.1" />
+        <entry key="../../../../../../run/media/b/storage/J2EE/AndroidProjects/NoteApp-Room/app/src/main/res/layout/activity_add_note.xml" value="0.1" />
+        <entry key="../../../../../../run/media/b/storage/J2EE/AndroidProjects/NoteApp-Room/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="../../../../../../run/media/b/storage/J2EE/AndroidProjects/NoteApp-Room/app/src/main/res/layout/content_add_note_acitivity.xml" value="0.1" />
+        <entry key="../../../../../../run/media/b/storage/J2EE/AndroidProjects/NoteApp-Room/app/src/main/res/layout/content_main.xml" value="0.1" />
+        <entry key="../../../../../../run/media/b/storage/J2EE/AndroidProjects/NoteApp-Room/app/src/main/res/layout/recycler_row.xml" value="0.22" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.19270833333333334" />
         <entry key="app/src/main/res/layout/content_main.xml" value="0.19270833333333334" />
         <entry key="app/src/main/res/layout/fragment_first.xml" value="0.19270833333333334" />
